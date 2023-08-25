@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Herr+Von+Muellerhoff&family=Hind+Siliguri:wght@600&family=Indie+Flower&family=Jost:wght@300;500;700&family=Kaushan+Script&family=Koulen&family=Leckerli+One&family=Montaga&family=Niconne&family=Nunito:ital,wght@1,300&family=Open+Sans:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,500&family=Red+Hat+Display:ital@1&family=Roboto+Slab&family=Roboto:ital,wght@0,100;0,900;1,100;1,900&family=Satisfy&family=Sirin+Stencil&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;   
+}
+body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+.wrapper{
+    width: 720px;
+    background: #ffffff8d;
+    border-radius: 10px;
+
+}
+.wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #bfbfbf;
+}
+.wrapper form{
+    margin: 35px 30px;
+}
+form .db1-field{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+.db1-field .field{
+    height: 100px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+form .field input,
+form .message textarea{
+    height: 200%;
+    width: 90%;
+    outline: none;
+    padding: 0 25px 0 48px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    margin: 8px 25px;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: #bfbfbf;
+}
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #064ed0;
+}
+.wrapper form i{
+    position: absolute;
+    left: 18px;
+    font-size: 15px;
+    color: #bfbfbf;
+    pointer-events: none;
+    transform: translateY(-50%);    
+}
+form .message{
+    position: relative;
+}
+form .message i{
+    top: 30px;
+    font-size: 20px;
+}
+form .field input:focus ~ i{
+    color: #064ed0;
+}
+form .message textarea{
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 120px;
+    max-height: 300px;   
+    padding: 15px 20px 0 48px;
+}
+form .button-area{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+.button-area button{
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #064ed0;
+    padding: 13px 25px;
+}
+.button-area span{
+    color: rgb(73, 192, 138);
+    margin-left: 30px;
+    display: none;
+}
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+    .field .db1-field{
+       flex-direction: column; 
+    }
+    .db1-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form .message textarea{
+        resize: none;
+    }
+    .button-area button{
+        width: 100%;
+    }
+    form .button-area{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .button-area span{
+        text-align: center;
+        margin: 20px 0;
+    }
+}
